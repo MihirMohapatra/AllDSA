@@ -1,0 +1,22 @@
+FROM openjdk:17-jdk-slim
+
+WORKDIR /app
+
+COPY target/my-microservice.jar app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+
+
+
+// commands Build and Run Docker image
+
+docker build -t my-microservice:latest .
+
+docker run -d -p 8080:8080 my-microservice
+
+// If we have multiple microservice we need docker-compose.yml
+// Deploy in Kubernetes "deployment.yaml"
+
