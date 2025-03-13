@@ -10,7 +10,7 @@ public class ThirdLongestWord {
         String str = "mihir kumar mohapatra is a backend developer";
 
         List<String> limit = Arrays.stream(str.split(" "))
-                .distinct() // Remove duplicates if needed
+                .distinct()
                 .sorted(Comparator.comparingInt(String::length).reversed()
                         .thenComparing(Comparator.naturalOrder())).toList();
 
