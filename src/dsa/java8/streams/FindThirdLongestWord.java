@@ -3,9 +3,8 @@ package dsa.java8.streams;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Stream;
 
-public class ThirdLongestWord {
+public class FindThirdLongestWord {
     public static void main(String[] args) {
         String str = "mihir kumar mohapatra is a backend developer";
 
